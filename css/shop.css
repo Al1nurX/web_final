@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+
+    margin-bottom: 100px;
+}
+
+.nav-item {
+    color: black;
+    text-decoration: none;
+
+    transition: color 0.2s linear;
+}
+
+.nav-item:hover {
+    color: palevioletred;
+}
+
+.scale {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.scale img {
+    max-width: 372.33;
+    max-height: 372.33;
+    transition: 1s;
+    display: block;
+}
+
+.scale img:hover {
+    transform: scale(1.2);
+}
+
+.overlay-text1 {
+    position: absolute;
+    top: 63%;
+    left: 4%;
+}
+
+.overlay-text2 {
+    position: absolute;
+    top: 64%;
+    left: 37%;
+}
+
+.overlay-text3 {
+    position: absolute;
+    top: 64%;
+    left: 70%;
+}
+
+.overlay-text4 {
+    position: absolute;
+    top: 102%;
+    left: 4%;
+}
+
+.overlay-text5 {
+    position: absolute;
+    top: 102%;
+    left: 37%;
+}
+
+.overlay-text6 {
+    position: absolute;
+    top: 102%;
+    left: 70%;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+    margin-top: 80px;
+}
+
+.fcontainer {
+    max-width: 1170px;
+}
+
+.frow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: white;
+    padding-left: 10px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 15px 15px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: white;
+}
+
+@media(max-width: 767px) {
+    .icon {
+        width: 50%;
+    }
+    .menu {
+        width: 50%;
+    }
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .icon {
+        width: 100%;
+    }
+    .side {
+        width: 100%;
+        position: absolute;
+        top: 82%;
+    }
+    .menu {
+        width: 100%;
+
+        font-size: 5vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .scale {
+        width: 100%;
+
+        flex-direction: column;
+    }
+    .overlay-text1 {
+        position: absolute;
+
+        top: 66%;
+        left: 13%;
+    }
+    .overlay-text2 {
+        position: absolute;
+
+        top: 103%;
+        left: 13%;
+    }
+    .overlay-text3 {
+        position: absolute;
+
+        top: 139%;
+        left: 13%;
+    }
+    .overlay-text4 {
+        position: absolute;
+
+        top: 175%;
+        left: 13%;
+    }
+    .overlay-text5 {
+        position: absolute;
+
+        top: 210%;
+        left: 13%;
+    }
+    .overlay-text6 {
+        position: absolute;
+
+        top: 246%;
+        left: 13%;
+    }
+    .footer-col {
+        width: 100%;
+    }
+}
