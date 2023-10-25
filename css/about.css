@@ -211,46 +211,14 @@ h1, h2, h3, a {
         justify-content: space-around;
         align-items: center;
     }
+    /* .img-a {
+        height: 100px;
+        width: 200px;
+    } */
     .scale {
         width: 100%;
 
         flex-direction: column;
-    }
-    .overlay-text1 {
-        position: absolute;
-
-        top: 66%;
-        left: 13%;
-    }
-    .overlay-text2 {
-        position: absolute;
-
-        top: 103%;
-        left: 13%;
-    }
-    .overlay-text3 {
-        position: absolute;
-
-        top: 139%;
-        left: 13%;
-    }
-    .overlay-text4 {
-        position: absolute;
-
-        top: 175%;
-        left: 13%;
-    }
-    .overlay-text5 {
-        position: absolute;
-
-        top: 210%;
-        left: 13%;
-    }
-    .overlay-text6 {
-        position: absolute;
-
-        top: 246%;
-        left: 13%;
     }
     .footer-col {
         width: 100%;
