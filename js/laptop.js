@@ -20,6 +20,3 @@ const onPrev = (carouselIndex, event) => {
 	handleImageChange(carouselIndex, -1);
 	event.preventDefault();
 }
-
-
-

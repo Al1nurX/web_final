@@ -34,6 +34,7 @@ pass.addEventListener("click", () => {
     }
 });
 
+
 const form = document.getElementById('form');
 const username = document.getElementById('name');
 const password = document.getElementById('password');

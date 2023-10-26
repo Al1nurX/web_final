@@ -11,12 +11,27 @@ calculateTime = () => {
     hour = hour < 10 ? '0' + hour : hour;
     minute = minute < 10 ? '0' + minute : minute;
 
-    document.querySelector("#day").textContent = dayNames[dayNumber];
-    document.querySelector("#hour").textContent = hour;
-    document.querySelector("#minute").textContent = minute;
-    document.querySelector("#ampm").textContent = ampm;
+    var elementIds = ["day", "hour", "minute", "ampm"];
+
+    for (let i = 0; i < elementIds.length; i++) {
+        switch (elementIds[i]) {
+            case "day":
+                document.querySelector("#" + elementIds[i]).textContent = dayNames[dayNumber];
+                break;
+            case "hour":
+                document.querySelector("#" + elementIds[i]).textContent = hour;
+                break;
+            case "minute":
+                document.querySelector("#" + elementIds[i]).textContent = minute;
+                document.querySelector("#" + elementIds[i]).style.color = 'red';
+                break;
+            case "ampm":
+                document.querySelector("#" + elementIds[i]).textContent = ampm;
+                break;
+        }
+    }
 
     setTimeout(calculateTime, 200);
 }
 
-window.addEventListener('load', calculateTime)
+window.addEventListener('load', calculateTime);
