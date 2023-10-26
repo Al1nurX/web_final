@@ -1,18 +1,18 @@
 function startCountdown(id, endDate) {
-  var countdown = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = endDate - now;
-      if (distance <= 0) {
-          clearInterval(countdown);
-          document.getElementById(id).innerHTML = "The promotion is over";
-      } else {
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-          document.getElementById(id).innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds + "";
-      }
-  }, 1000);
+    var countdown = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = endDate - now;
+        if (distance <= 0) {
+            clearInterval(countdown);
+            document.getElementById(id).innerHTML = "The promotion is over";
+        } else {
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById(id).innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds + "";
+        }
+    }, 1000);
 }
 
 var countdownDate1 = new Date("2023-11-01 00:00:00").getTime();

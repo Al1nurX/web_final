@@ -6,11 +6,11 @@
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .header {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 
     margin-bottom: 100px;
 }
@@ -42,87 +42,80 @@ body {
     transform: scale(1.2);
 }
 
-.overlay-text1 {
-    position: absolute;
-    top: 63%;
-    left: 4%;
-}
-
-.overlay-text2 {
-    position: absolute;
-    top: 64%;
-    left: 37%;
-}
-
-.overlay-text3 {
-    position: absolute;
-    top: 64%;
-    left: 70%;
-}
-
-.overlay-text4 {
-    position: absolute;
-    top: 102%;
-    left: 4%;
-}
-
-.overlay-text5 {
-    position: absolute;
-    top: 102%;
-    left: 37%;
-}
-
-.overlay-text6 {
-    position: absolute;
-    top: 102%;
-    left: 70%;
-}
-#countdown1{
-    background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+#countdown1 {
+    background: linear-gradient(
+        to right,
+        #ff9a9e 0%,
+        #fad0c4 99%,
+        #fad0c4 100%
+    );
     padding: 20px;
     border-radius: 10px;
-  }
-  #countdown2{
-    background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+#countdown2 {
+    background: linear-gradient(
+        to right,
+        #ff9a9e 0%,
+        #fad0c4 99%,
+        #fad0c4 100%
+    );
     padding: 20px;
     border-radius: 10px;
-  }
-  #countdown3{
-    background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+#countdown3 {
+    background: linear-gradient(
+        to right,
+        #ff9a9e 0%,
+        #fad0c4 99%,
+        #fad0c4 100%
+    );
     padding: 20px;
     border-radius: 10px;
-  }
-  #countdown4{
-    background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+#countdown4 {
+    background: linear-gradient(
+        to right,
+        #ff9a9e 0%,
+        #fad0c4 99%,
+        #fad0c4 100%
+    );
     padding: 20px;
     border-radius: 10px;
-  }
-  #countdown5{
-    background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+#countdown5 {
+    background: linear-gradient(
+        to right,
+        #ff9a9e 0%,
+        #fad0c4 99%,
+        #fad0c4 100%
+    );
     padding: 20px;
     border-radius: 10px;
-  }
-  #countdown6{
-    background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+#countdown6 {
+    background: linear-gradient(
+        to right,
+        #ff9a9e 0%,
+        #fad0c4 99%,
+        #fad0c4 100%
+    );
     padding: 20px;
     border-radius: 10px;
-  }
-  .countdown-unit {
+}
+.countdown-unit {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #fff;
-  }
-  
-  .countdown-unit .countdown-value {
+}
+
+.countdown-unit .countdown-value {
     font-size: 3rem;
     color: #fff;
-  }
-  
-  .countdown-unit .countdown-label {
+}
+
+.countdown-unit .countdown-label {
     font-size: 1rem;
     color: #fff;
-  }
-  
-  
+}
 
 .footer {
     background-color: #24262b;
@@ -150,7 +143,7 @@ body {
 }
 
 .footer-col h4::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -183,7 +176,7 @@ body {
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     margin: 0 15px 15px 0;
     text-align: center;
     line-height: 40px;
@@ -197,7 +190,7 @@ body {
     background-color: white;
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .icon {
         width: 50%;
     }
@@ -210,7 +203,7 @@ body {
     }
 }
 
-@media(max-width: 574px) {
+@media (max-width: 574px) {
     .icon {
         width: 100%;
     }
@@ -231,42 +224,6 @@ body {
         width: 100%;
 
         flex-direction: column;
-    }
-    .overlay-text1 {
-        position: absolute;
-
-        top: 66%;
-        left: 13%;
-    }
-    .overlay-text2 {
-        position: absolute;
-
-        top: 103%;
-        left: 13%;
-    }
-    .overlay-text3 {
-        position: absolute;
-
-        top: 139%;
-        left: 13%;
-    }
-    .overlay-text4 {
-        position: absolute;
-
-        top: 175%;
-        left: 13%;
-    }
-    .overlay-text5 {
-        position: absolute;
-
-        top: 210%;
-        left: 13%;
-    }
-    .overlay-text6 {
-        position: absolute;
-
-        top: 246%;
-        left: 13%;
     }
     .footer-col {
         width: 100%;

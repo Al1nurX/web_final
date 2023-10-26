@@ -1,10 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-f {
+    position: absolute;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+.digitalClock {
+    width: fit-content;
+    margin: auto;
+    padding: 200px;
+    margin-left: 300px;
+    border-radius: 2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+}
+.digitalClock h1 {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .header {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 
     background-image: url(../pics/jack-b-fewhfXbCUzI-unsplash.jpg);
     height: 100vh;
@@ -27,7 +55,7 @@ body {
 .menu {
     color: white;
     text-decoration: none;
-    
+
     transition: color 0.2s linear;
 }
 
@@ -36,10 +64,11 @@ body {
 }
 
 .quote {
+    position: absolute;
     display: flex;
     justify-content: center;
     position: relative;
-    top: 70%;
+    top: 15%;
 }
 
 .deli {
@@ -74,7 +103,7 @@ body {
 }
 
 .footer-col h4::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -107,7 +136,7 @@ body {
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     margin: 0 15px 15px 0;
     text-align: center;
     line-height: 40px;
@@ -121,7 +150,7 @@ body {
     background-color: white;
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
@@ -140,7 +169,7 @@ body {
     }
 }
 
-@media(max-width: 574px) {
+@media (max-width: 574px) {
     .icon {
         width: 100%;
     }
@@ -172,5 +201,25 @@ body {
     }
     .footer-col {
         width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    #bar1,
+    #bar2 {
+        display: none;
+    }
+
+    .digitalClock {
+        text-align: center;
+        width: 100%;
+    }
+
+    .digitalClock h1 {
+        display: block;
+    }
+}
+@media (max-width: 480px) {
+    .digitalClock h1 {
+        font-size: 4rem;
     }
 }
