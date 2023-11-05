@@ -181,6 +181,11 @@ h1, h2, h3, a {
     background-color: white;
 }
 
+.first-con {
+    max-height: 470px;
+    min-width: 630px;
+}
+
 @media (max-width: 767px) {
     .icon {
         width: 50%;
@@ -215,6 +220,10 @@ h1, h2, h3, a {
         height: 100px;
         width: 200px;
     } */
+    .first-con {
+        max-height: 242px;
+        min-width: 366px;
+    }
     .scale {
         width: 100%;
 
