@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,71 @@
     <link rel="stylesheet" href="./css/user.css">
     <title>User Login</title>
 </head>
+
 <body>
     <div class="center">
         <h1>Login</h1>
-        <form id="form" method="get">
+        <form id="form1" method="get">
             <div class="txt-field">
                 <input id="name" type="text">
                 <span></span>
                 <label>Username</label>
             </div>
+            <div id="user-error"></div>
             <div class="txt-field">
                 <input id="password" type="password">
                 <span></span>
                 <label>Password</label>
             </div>
+            <div id="pass-error"></div>
             <div id="pass" class="pass">Forgot your password?</div>
             <button id="login" type="submit">Login</button>
             <div id="signup" class="signup_link">
-                Not a member? <a class="signup" href="#">Signup</a>
+                Not a member? <a class="signup" href="#">Sign up</a>
             </div>
         </form>
-        <div id="error"></div>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="center-signup">
+            <div class="main">
+                <h1>Sign up</h1>
+                <img id="btn-close" src="/pics/cross.png" width="30px" height="30px" alt="close">
+            </div>
+            <form id="form2" method="get">
+                <div class="txt-field">
+                    <input id="regName" type="text">
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div id="reg-user-error"></div>
+                <div class="txt-field">
+                    <input id="regNumber" type="tel">
+                    <span></span>
+                    <label>Phone Number</label>
+                </div>
+                <div id="reg-phone-error"></div>
+                <div class="txt-field">
+                    <input id="regPassword" type="password">
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div id="reg-pass-error"></div>
+                <div class="txt-field">
+                    <input id="regPassword2" type="password">
+                    <span></span>
+                    <label>Confirm password</label>
+                </div>
+                <div id="reg-pass-error2"></div>
+                <div class="sign">
+                    <button id="signup2" type="submit" onclick="registerUser()">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
     <script src="./js/user.js"></script>
 </body>
+
 </html>

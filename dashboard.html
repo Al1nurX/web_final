@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIX.kz</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon-32x32.png">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-gradient bg-light py-0 shadow" id="TopNav">
+            <div id="navBarBrand-container">
+                <a class="navbar-brand" href="/admin.html">ADMIN</a>
+            </div>
+            <div id="navBarMenu-container">
+                <div class="ct-top-nav-left">
+                    <button id="SideBarToggle">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <span class="fs-5">Navigation</span>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="sidebarNav">
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <div class="nav-icon">
+                        <i class="fa fa-dashboard"></i>
+                    </div>
+                    <a href="/dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item ">
+                    <div class="nav-icon">
+                        <i class="fa fa-th-list"></i>
+                    </div>
+                    <a href="/users.html" class="nav-link">Users</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-light button"><a class="text-decoration-none text-reset" href="/index.html">Log Out</a></button>
+        </div>
+
+        <div id="main-wrapper" class="py-5 px-3">
+            <div class="container-fluid-md">
+                <h1 class="text-center"><b>Admin's dashboard</b></h1>
+                <hr class="border-3 border-dark mx-auto opacity-100" style="width: 80px">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Sold Items</h5>
+                                <p class="card-text" id="sold-items-count">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Users</h5>
+                                <p class="card-text" id="totalUsers">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="shadow-top py-4 col-auto bg-light text-dark" id="footer">
+            <div class="">
+                <div class="text-center">
+                    All Rights Reserved &copy; <span id="dt-year"></span> | <span
+                        class="text-body fw-bolder">AIX.kz</span>
+                </div>
+                <div class="text-center">
+                    <a href="mailto:AIX.kz@gmail.com" class="text-decoration-none text-body">AIX.kz@gmail.com</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>

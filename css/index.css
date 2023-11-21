@@ -6,31 +6,6 @@ body {
     box-sizing: border-box;
 }
 
-.container-f {
-    position: absolute;
-    width: 95%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-overflow: ellipsis;
-}
-.digitalClock {
-    width: fit-content;
-    margin: auto;
-    padding: 200px;
-    margin-left: 300px;
-    border-radius: 2px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.1);
-}
-.digitalClock h1 {
-    display: inline-block;
-    margin: 0 10px;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
 .header {
     font-family: "Montserrat", sans-serif;
 

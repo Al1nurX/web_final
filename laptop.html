@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-d8wjV+EYw1x1kjzotloujsn2SVXt5t+wD5BVl+flVv6Rdj37nyCu5aS9cZpOeA2G" crossorigin="anonymous">
+
     <title>AIX.kz</title>
 </head>
 
@@ -27,195 +29,307 @@
                     <h5 class="menu m-0"><a class="nav-item" href="./sales.html">Sales</a></h5>
                     <h5 class="menu m-0"><a class="nav-item" href="./about.html">About Us</a></h5>
                     <a class="menu m-0" href="./user.html"><img src="./pics/user.png" width="23px" height="23px" alt=""></a>
+                    <div style="position: relative;"> 
+                        <button class="menu m-0" id="test" onclick="myFunction()"><img src="./pics/free-icon-shopping-cart-of-checkered-design-34627.png" width="23px" height="23px" alt=""></button>
+                        <div class="shopping-cart" id="myDIV">
+                        <h2>Shopping Cart</h2>
+                        <ul id="cart-items"></ul>
+                        <p id="cart-total">Total: $0.00</p>
+                    </div></div>
                 </div>
             </div>
         </nav>
     </div>
 
+
     <div class="catalog pb-5 mb-5">
         <div class="container-fluid px-4">
             <div class="row">
-                <div class="scale col-lg-4 col-md-6 col-sm-12 p-2">
-                    <a class="text-decoration-none " href="#">
-                        <div class="carousel" id="carousel1">
-                            <button class="carousel-button next btn btn-secondary mt-3"
-                                onclick="onNext(1, event);">&#187;</button>
-                            <button class="carousel-button prev btn btn-secondary mt-3"
-                                onclick="onPrev(1, event);">&#171;</button>
-                            <ul class="slides">
-                                <li class="slide" data-active>
-                                    <img class="img-fluid" src="./pics/gallery_medium.jpg" alt="">
-                                </li>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="scale p-2">
+                        <a class="text-decoration-none" href="#">
+                            <div class="carousel" id="carousel1">
+                                <button class="carousel-button next btn btn-secondary mt-3"
+                                    onclick="onNext(1, event);">&#187;</button>
+                                <button class="carousel-button prev btn btn-secondary mt-3"
+                                    onclick="onPrev(1, event);">&#171;</button>
+                                <ul class="slides">
+                                    <li class="slide" data-active>
+                                        <img class="img-fluid" src="./pics/gallery_medium.jpg" alt="#">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid" src="./pics/gallery_medium-2.jpg" alt="#">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid" src="./pics/gallery_medium-3.jpg" alt="#">
+                                    </li>
+                                </ul>
+                                <div class="text-content">
+                                        <div class="text-content">
+                                            <h4 class="text-center text-black opacity-50">Apple MacBook Air 13 Silver</h4>
+                                            <p class="text-center price fs-5"><b>Price: $999.99</b></p>
+                                            
+                                            <button class="add-to-cart-button" onclick ="addToCart({ name: 'Apple MacBook Air 13 Silver', price: 999.99 })">
+                                                <i class="bi bi-cart"></i> 
+                                                <img src="/pics/free-icon-shopping-cart-of-checkered-design-34627.png" alt="" width="20px" height="20px">
+                                            </button>
+                                            
+                                            <!-- Иконка для удаления из корзины -->
+                                            <button class="remove-from-cart-button" onclick="removeFromCart({ name: 'Apple MacBook Air 13 Silver', price: 999.99 })">
 
-                                <li class="slide">
-                                    <img class="img-fluid" src="./pics/gallery_medium-2.jpg" alt="">
-                                </li>
-                                <li class="slide">
-                                    <img class="img-fluid" src="./pics/gallery_medium-3.jpg" alt="">
-                                </li>
-                            </ul>
-                            <div class="text-content">
-                                <h4 class="text-center text-black">
-                                    Apple MacBook Air 13 Silver</h4>
+                                                <i class="bi bi-trash"></i> <!-- Иконка мусорной корзины -->
+                                                <img src="/pics/free-icon-recycle-bin-3156999.png" alt=""width="20px" height="20px">
+                                            </button>
+                                        </div>
+                                        
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                </div>
+                
+                
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="scale p-2">
+                        <a class="text-decoration-none" href="#">
+                            <div class="carousel" id="carousel2">
+                                <button class="carousel-button next btn btn-secondary mt-3"
+                                    onclick="onNext(2, event);">&#187;</button>
+                                <button class="carousel-button prev btn btn-secondary mt-3"
+                                    onclick="onPrev(2, event);">&#171;</button>
+                                <ul class="slides">
+                                    <li class="slide" data-active>
+                                        <img class="img-fluid" src="./pics/gallery_medium-14.jpg" alt="">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid" src="./pics/gallery_medium-13.jpg" alt="">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid" src="./pics/gallery_medium-12.jpg" alt="">
+                                    </li>
+                                </ul>
+                                <div class="text-content">
+                                        <div class="text-content">
+                                            <h4 class="text-center text-black opacity-50">Apple MacBook Air 15</h4>
+                                            <p class="text-center price fs-5"><b>Price: $299.99</b></p>
+                                            <button onclick="addToCart({ name: 'Apple MacBook Air 15', price: 299.99 })">
+                                                <i class="bi bi-cart"></i> 
+                                                <img src="/pics/free-icon-shopping-cart-of-checkered-design-34627.png" alt="" width="20px" height="20px">
+                                            </button>
+                                            <button onclick="removeFromCart({ name: 'Apple MacBook Air 15', price: 299.99 })">
+
+                                                <i class="bi bi-trash"></i> <!-- Иконка мусорной корзины -->
+                                                <img src="/pics/free-icon-recycle-bin-3156999.png" alt="" width="20px" height="20px">
+                                            </button>
+                                        </div>
+                                        <!-- Иконка для удаления из корзины -->                                   
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="scale col-lg-4 col-md-6 col-sm-12 p-2">
-                    <a class="text-decoration-none" href="#">
-                        <div class="carousel" id="carousel2">
-                            <button class="carousel-button next btn btn-secondary mt-3"
-                                onclick="onNext(2, event);">&#187;</button>
-                            <button class="carousel-button prev btn btn-secondary mt-3"
-                                onclick="onPrev(2, event);">&#171;</button>
-                            <ul class="slides">
-                                <li class="slide" data-active>
-                                    <img class="img-fluid" src="./pics/gallery_medium-14.jpg" alt="">
-                                </li>
-                                <li class="slide">
-                                    <img class="img-fluid" src="./pics/gallery_medium-13.jpg" alt="">
-                                </li>
-                                <li class="slide">
-                                    <img class="img-fluid" src="./pics/gallery_medium-12.jpg" alt="">
-                                </li>
-                            </ul>
-                            <div class="text-content">
-                                <h4 class="text-center text-black">
-                                    Apple MacBook Pro 14 Silver</h4>
+                
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="scale p-2">
+                        <a class="text-decoration-none" href="#">
+                            <div class="carousel" id="carousel3">
+                                <button class="carousel-button next btn btn-secondary mt-3"
+                                    onclick="onNext(3, event);">&#187;</button>
+                                <button class="carousel-button prev btn btn-secondary mt-3"
+                                    onclick="onPrev(3, event);">&#171;</button>
+                                <ul class="slides">
+                                    <li class="slide" data-active>
+                                        <img class="img-fluid" src="./pics/gallery_medium-9.jpg" alt="">
+                                    </li>
+    
+                                    <li class="slide">
+                                        <img class="img-fluid" src="./pics/gallery_medium-11.jpg" alt="">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid" src="./pics/gallery_medium-10.jpg" alt="">
+                                    </li>
+                                </ul>
+                                <div class="text-content">
+                                    <div class="text-content">
+                                        <h4 class="text-center text-black opacity-50">Apple MacBook Air 13 Silver Dark Grey</h4>
+                                        <p class="text-center price fs-5"><b>Price: $399.99</b></p>
+                                        <button onclick="addToCart({ name: 'Apple MacBook Air 13 Silver Dark Grey', price: 399.99 })">
+                                            <i class="bi bi-cart"></i> 
+                                            <img src="/pics/free-icon-shopping-cart-of-checkered-design-34627.png" alt="" width="20px" height="20px">
+                                        </button>
+                                        
+                                        <!-- Иконка для удаления из корзины -->
+                                        <button onclick="removeFromCart({ name: 'Apple MacBook Air 13 Silver Dark Grey', price: 399.99 })">
+
+                                            <i class="bi bi-trash"></i> <!-- Иконка мусорной корзины -->
+                                            <img src="/pics/free-icon-recycle-bin-3156999.png" alt="" width="20px" height="20px">
+                                        </button>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-                <div class="scale col-lg-4 col-md-6 col-sm-12 p-2">
-                    <a class="text-decoration-none" href="#">
-                        <div class="carousel" id="carousel3">
-                            <button class="carousel-button next btn btn-secondary mt-3"
-                                onclick="onNext(3, event);">&#187;</button>
-                            <button class="carousel-button prev btn btn-secondary mt-3"
-                                onclick="onPrev(3, event);">&#171;</button>
-                            <ul class="slides">
-                                <li class="slide" data-active>
-                                    <img class="img-fluid" src="./pics/gallery_medium-9.jpg" alt="">
-                                </li>
+            </div>
+            
+    
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="scale p-2">
+                        <a class="text-decoration-none" href="#">
+                            <div class="carousel" id="carousel4">
+                                <button class="carousel-button next btn btn-secondary mt-3"
+                                    onclick="onNext(4, event);">&#187;</button>
+                                <button class="carousel-button prev btn btn-secondary mt-3"
+                                    onclick="onPrev(4, event);">&#171;</button>
+    
+                                <ul class="slides">
+                                    <li class="slide" data-active>
+                                        <img class="img-fluid"
+                                            src="./pics/gallery_medium-6.jpg"
+                                            alt="">
+                                    </li>
+    
+                                    <li class="slide">
+                                        <img class="img-fluid"
+                                            src="./pics/gallery_medium-8.jpg"
+                                            alt="">
+                                    </li>
+                                </ul>
+                                <div class="text-content mt-4">
+                                        <div class="text-content">
+                                            <h4 class="text-center text-black opacity-50">Huawei MateBook D 14</h4>
+                                            <p class="text-center price fs-5"><b>Price: $999.99</b></p>
+                                            <button onclick="addToCart({ name: 'Huawei MateBook D 14', price: 999.99 })">
+                                                <i class="bi bi-cart"></i> 
+                                                <img src="/pics/free-icon-shopping-cart-of-checkered-design-34627.png" alt="" width="20px" height="20px">
+                                            </button>
+                                            
+                                            <!-- Иконка для удаления из корзины -->
+                                            <button onclick="removeFromCart({ name: 'Huawei MateBook D 14', price: 999.99 })">
 
-                                <li class="slide">
-                                    <img class="img-fluid" src="./pics/gallery_medium-11.jpg" alt="">
-                                </li>
-                                <li class="slide">
-                                    <img class="img-fluid" src="./pics/gallery_medium-10.jpg" alt="">
-                                </li>
-                            </ul>
-                            <div class="text-content">
-                                <h4 class="text-center text-black">Apple MacBook Air 13 Silver Dark Grey</h4>
+                                                <i class="bi bi-trash"></i> <!-- Иконка мусорной корзины -->
+                                                <img src="/pics/free-icon-recycle-bin-3156999.png" alt="" width="20px" height="20px">
+                                            </button>
+                                        </div>
+                                        
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-                <div class="scale col-lg-4 col-md-6 col-sm-12 p-2">
-                    <a class="text-decoration-none" href="#">
-                        <div class="carousel" id="carousel4">
-                            <button class="carousel-button next btn btn-secondary mt-3"
-                                onclick="onNext(4, event);">&#187;</button>
-                            <button class="carousel-button prev btn btn-secondary mt-3"
-                                onclick="onPrev(4, event);">&#171;</button>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="scale p-2">
+                        <a class="text-decoration-none" href="#">
+                            <div class="carousel" id="carousel6">
+                                <button class="carousel-button next btn btn-secondary mt-3"
+                                    onclick="onNext(6, event);">&#187;</button>
+                                <button class="carousel-button prev btn btn-secondary mt-3"
+                                    onclick="onPrev(6, event);">&#171;</button>
+    
+                                <ul class="slides">
+                                    <li class="slide" data-active>
+                                        <img class="img-fluid"
+                                            src="./pics/asus.jpg"
+                                            alt="">
+                                    </li>
+    
+                                    <li class="slide">
+                                        <img class="img-fluid"
+                                            src="./pics/asus2.jpg"
+                                            alt="">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid"
+                                            src="./pics/asus4.jpg"
+                                            alt="">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid"
+                                            src="./pics/asus3.jpg"
+                                            alt="">
+                                    </li>
+                                </ul>
+                                <div class="text-content mt-4">
+                                    <h4 class="text-center text-black">
+                                        </h4>
+                                        <div class="text-content">
+                                            <h4 class="text-center text-black opacity-50">ASUS Vivobook X160</h4>
+                                            <p class="text-center price fs-5"><b>Price: $599.99</b></p>
+                                            <button onclick="addToCart({ name: 'ASUS Vivobook X160', price: 599.99 })">
+                                                <i class="bi bi-cart"></i> 
+                                                <img src="/pics/free-icon-shopping-cart-of-checkered-design-34627.png" alt="" width="20px" height="20px">
+                                            </button>
+                                            
+                                            <!-- Иконка для удаления из корзины -->
+                                            <button onclick="removeFromCart({ name: 'ASUS Vivobook X160', price: 599.99 })">
 
-                            <ul class="slides">
-                                <li class="slide" data-active>
-                                    <img class="img-fluid"
-                                        src="./pics/gallery_medium-6.jpg"
-                                        alt="">
-                                </li>
-
-                                <li class="slide">
-                                    <img class="img-fluid"
-                                        src="./pics/gallery_medium-8.jpg"
-                                        alt="">
-                                </li>
-                            </ul>
-                            <div class="text-content mt-4">
-                                <h4 class="text-center text-black" data-model="ASUS ROG Zephyrus G14">
-                                    Huawei MateBook D 14</h4>
+                                                <i class="bi bi-trash"></i> <!-- Иконка мусорной корзины -->
+                                                <img src="/pics/free-icon-recycle-bin-3156999.png" alt="" width="20px" height="20px">
+                                            </button>
+                                        </div>
+                                        
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-                <div class="scale col-lg-4 col-md-6 col-sm-12 p-2">
-                    <a class="text-decoration-none" href="#">
-                        <div class="carousel" id="carousel5">
-                            <button class="carousel-button next btn btn-secondary mt-3"
-                                onclick="onNext(5, event);">&#187;</button>
-                            <button class="carousel-button prev btn btn-secondary mt-3"
-                                onclick="onPrev(5, event);">&#171;</button>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="scale p-2">
+                        <a class="text-decoration-none" href="#">
+                            <div class="carousel" id="carousel5">
+                                <button class="carousel-button next btn btn-secondary mt-3"
+                                    onclick="onNext(5, event);">&#187;</button>
+                                <button class="carousel-button prev btn btn-secondary mt-3"
+                                    onclick="onPrev(5, event);">&#171;</button>
+    
+                                <ul class="slides">
+                                    <li class="slide" data-active>
+                                        <img class="img-fluid"
+                                            src="./pics/acer.jpg"
+                                            alt="">
+                                    </li>
+    
+                                    <li class="slide">
+                                        <img class="img-fluid"
+                                            src="./pics/acer2.jpg"
+                                            alt="">
+                                    </li>
+                                    <li class="slide">
+                                        <img class="img-fluid"
+                                            src="./pics/acer3.jpg"
+                                            alt="">
+                                    </li>
+                                </ul>
+                                <div class="text-content mt-4">
+    
+                                    <div class="text-content">
+                                        <h4 class="text-center text-black opacity-50">Acer Swift 3 </h4>
+                                        <p class="text-center price fs-5"><b>Price: $599.99</b></p>
+                                        <button onclick="addToCart({ name: 'Acer Swift 3', price: 699.99 })">
+                                            <i class="bi bi-cart"></i> 
+                                            <img src="/pics/free-icon-shopping-cart-of-checkered-design-34627.png" alt="" width="20px" height="20px">
+                                        </button>
+                                        
+                                        <!-- Иконка для удаления из корзины -->
+                                        <button onclick="removeFromCart({ name: 'Acer Swift 3', price: 699.99 })">
 
-                            <ul class="slides">
-                                <li class="slide" data-active>
-                                    <img class="img-fluid"
-                                        src="./pics/acer.jpg"
-                                        alt="">
-                                </li>
-
-                                <li class="slide">
-                                    <img class="img-fluid"
-                                        src="./pics/acer2.jpg"
-                                        alt="">
-                                </li>
-                                <li class="slide">
-                                    <img class="img-fluid"
-                                        src="./pics/acer3.jpg"
-                                        alt="">
-                                </li>
-                            </ul>
-                            <div class="text-content mt-4">
-                                <h4 class="text-center text-black">
-                                    Acer Swift 3 
-                                </h4>
+                                            <i class="bi bi-trash"></i> <!-- Иконка мусорной корзины -->
+                                            <img src="/pics/free-icon-recycle-bin-3156999.png" alt="" width="20px" height="20px">
+                                        </button>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="scale col-lg-4 col-md-6 col-sm-12 p-2">
-                    <a class="text-decoration-none" href="#">
-                        <div class="carousel" id="carousel6">
-                            <button class="carousel-button next btn btn-secondary mt-3"
-                                onclick="onNext(6, event);">&#187;</button>
-                            <button class="carousel-button prev btn btn-secondary mt-3"
-                                onclick="onPrev(6, event);">&#171;</button>
-
-                            <ul class="slides">
-                                <li class="slide" data-active>
-                                    <img class="img-fluid"
-                                        src="./pics/asus.jpg"
-                                        alt="">
-                                </li>
-
-                                <li class="slide">
-                                    <img class="img-fluid"
-                                        src="./pics/asus2.jpg"
-                                        alt="">
-                                </li>
-                                <li class="slide">
-                                    <img class="img-fluid"
-                                        src="./pics/asus4.jpg"
-                                        alt="">
-                                </li>
-                                <li class="slide">
-                                    <img class="img-fluid"
-                                        src="./pics/asus3.jpg"
-                                        alt="">
-                                </li>
-                            </ul>
-                            <div class="text-content mt-4">
-                                <h4 class="text-center text-black">
-                                    ASUS Vivobook X160</h4>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="footer">
         <div class="fcontainer m-auto">
@@ -223,7 +337,7 @@
                 <div class="footer-col">
                     <h4 class="text-white text-capitalize">Company</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="#!">About Us</a></li>
                         <li><a href="#">Our Services</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Affiliate Program</a></li>
@@ -281,6 +395,16 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
+
 <script src="./js/laptop.js"></script>
 
 </html>
+
+
+
+
+       
+       
+               
+                   
+    
