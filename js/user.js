@@ -36,6 +36,27 @@ form.addEventListener('submit', (event) => {
     }
 });
 
+const form3 = document.getElementById('forgotPasswordForm');
+const username2 = document.getElementById('forgotEmail');
+const user_2_error = document.getElementById('forgotEmailError');
+
+form3.addEventListener('submit', (event) => {
+    let messages = [];
+
+    if (username2.value === '' || username2.value === null) {
+        messages.push('*Name is required!');
+    }
+
+    if (username2.value.length < 4) {
+        messages.push('*Username must be longer than 4 characters!');
+    }
+
+    if (messages.length > 0) {
+        event.preventDefault();
+        user_2_error.innerText = messages.join('\n');
+    }
+});
+
 // 2
 const form2 = document.getElementById('form2');
 const regUsername = document.getElementById('regName');
