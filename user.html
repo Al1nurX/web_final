@@ -12,7 +12,7 @@
 <body>
     <div class="center">
         <h1>Login</h1>
-        <form id="form1" method="get">
+        <form id="form1" method="get" onsubmit="return submitForm()">
             <div class="txt-field">
                 <input id="name" type="text">
                 <span></span>
@@ -25,7 +25,7 @@
                 <label>Password</label>
             </div>
             <div id="pass-error"></div>
-            <div id="pass" class="pass">Forgot your password?</div>
+            <div id="forgotPasswordLink" class="pass">Forgot your password?</div>
             <button id="login" type="submit">Login</button>
             <div id="signup" class="signup_link">
                 Not a member? <a class="signup" href="#">Sign up</a>
@@ -71,6 +71,26 @@
         </div>
     </div>
 
+    <div id="modal2" class="modal2">
+        <div class="center-reset">
+            <form id="forgotPasswordForm">
+                <div class="main">
+                    <h2>Forgot Your Password?</h2>
+                </div>
+                <p>Enter your email address and we'll send you a link to reset your password.</p>
+                <div class="txt-field">
+                    <input id="forgotEmail" type="email">
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div id="forgotEmailError"></div>
+                <div class="reset">
+                    <button id="resetPassword" class="reset" type="button" onclick="resetPassword()">Reset Password</button>
+                </div>
+                <p><a href="user.html" class="signup_link" id="goBackLink">Go back to login</a></p>
+            </form>
+        </div>
+    </div>
 
     <script src="./js/user.js"></script>
 </body>

@@ -46,7 +46,7 @@
                     <div class="nav-icon">
                         <i class="fa fa-th-list"></i>
                     </div>
-                    <a href="/users.html" class="nav-link">Users</a>
+                    <a href="/users.html" class="nav-link">Add Users</a>
                 </li>
             </ul>
             <button class="btn btn-outline-light button"><a class="text-decoration-none text-reset" href="/index.html">Log Out</a></button>
@@ -70,7 +70,34 @@
                 </table>
             </div>
         </div>
-
+        <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editUserForm">
+                            <div class="mb-3">
+                                <label for="editUsername" class="form-label">Username:</label>
+                                <input type="text" class="form-control" id="editUsername" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editPassword" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="editPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editPhone" class="form-label">Phone Number:</label>
+                                <input type="tel" class="form-control" id="editPhone" required>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="saveEditedUser()">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <footer class="shadow-top py-4 col-auto bg-light text-dark" id="footer">
             <div class="">
                 <div class="text-center">

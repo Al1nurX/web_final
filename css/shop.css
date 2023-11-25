@@ -15,6 +15,32 @@ body {
     margin-bottom: 100px;
 }
 
+.no-focus {
+    top: 50px;
+    border: none !important;
+}
+
+.no-focus:focus,
+.no-focus:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-close:focus,
+.btn-close:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#offcanvasNavbar {
+    width: 350px;
+    background: #e6dddd;
+}
+
+.icon {
+    padding-left: 45px;
+}
+
 .nav-item {
     color: black;
     text-decoration: none;
@@ -27,14 +53,15 @@ body {
 }
 
 .scale {
+    position: relative;
     display: inline-block;
     overflow: hidden;
 }
 
 .scale img {
-    max-width: 372.33;
-    max-height: 372.33;
-    transition: 1s;
+    width: 100%;
+    height: auto;
+    transition: transform 1s;
     display: block;
 }
 
@@ -44,38 +71,38 @@ body {
 
 .overlay-text1 {
     position: absolute;
-    top: 63%;
-    left: 4%;
+    top: 80%;
+    left: 9%;
 }
 
 .overlay-text2 {
     position: absolute;
-    top: 64%;
-    left: 37%;
+    top: 81%;
+    left: 9%;
 }
 
 .overlay-text3 {
     position: absolute;
-    top: 64%;
-    left: 70%;
+    top: 82%;
+    left: 9%;
 }
 
 .overlay-text4 {
     position: absolute;
-    top: 102%;
-    left: 4%;
+    top: 80%;
+    left: 9%;
 }
 
 .overlay-text5 {
     position: absolute;
-    top: 102%;
-    left: 37%;
+    top: 80%;
+    left: 9%;
 }
 
 .overlay-text6 {
     position: absolute;
-    top: 102%;
-    left: 70%;
+    top: 80%;
+    left: 9%;
 }
 
 .footer {
@@ -151,12 +178,22 @@ body {
     background-color: white;
 }
 
+@media (min-width: 768px) {
+    .navbar-toggler {
+        visibility: hidden;
+    }
+}
+
 @media(max-width: 767px) {
+    .header {
+        padding: 0 40px;
+    }
+    .side {
+        visibility: hidden;
+    }
     .icon {
         width: 50%;
-    }
-    .menu {
-        width: 50%;
+        padding-left: 0%;
     }
     .footer-col {
         width: 50%;
@@ -168,59 +205,13 @@ body {
     .icon {
         width: 100%;
     }
-    .side {
-        width: 100%;
-        position: absolute;
-        top: 82%;
-    }
-    .menu {
-        width: 100%;
-
-        font-size: 5vw;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    #offcanvasNavbar {
+        width: 280px;
     }
     .scale {
         width: 100%;
 
         flex-direction: column;
-    }
-    .overlay-text1 {
-        position: absolute;
-
-        top: 66%;
-        left: 13%;
-    }
-    .overlay-text2 {
-        position: absolute;
-
-        top: 103%;
-        left: 13%;
-    }
-    .overlay-text3 {
-        position: absolute;
-
-        top: 139%;
-        left: 13%;
-    }
-    .overlay-text4 {
-        position: absolute;
-
-        top: 175%;
-        left: 13%;
-    }
-    .overlay-text5 {
-        position: absolute;
-
-        top: 210%;
-        left: 13%;
-    }
-    .overlay-text6 {
-        position: absolute;
-
-        top: 246%;
-        left: 13%;
     }
     .footer-col {
         width: 100%;

@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
+.header {
+    background-color: #fff;
     font-family: "Montserrat", sans-serif;
+    margin-bottom: 100px;
 }
 
-.header {
-    font-family: "Montserrat", sans-serif;
-
-    margin-bottom: 100px;
+.navbar {
+    background-color: #fff;
+    border: none;
 }
 
 .no-focus {
@@ -41,112 +41,80 @@ body {
     padding-left: 45px;
 }
 
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 5px;
+}
+
+body {
+  background-color:#f5f5f5;
+}
+
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+
+.panel-heading {
+    padding: 20px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.panel {
+    margin-bottom: 20px !important;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
+}
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #00bcd4;
+    text-align: center;
+    color: #fff;
+}
+
+a {
+  color:#fff;
+  text-decoration:underline;
+}
+
+h1,
+h2,
+h3,
+a {
+    color: #e91e63;
+}
+
+.footer {
+    background-color: #24262b;
+    color: #fff;
+    padding: 70px 0;
+    margin-top: 80px;
+}
+
 .nav-item {
     color: black;
     text-decoration: none;
-
     transition: color 0.2s linear;
 }
 
 .nav-item:hover {
     color: palevioletred;
-}
-
-.scale {
-    display: inline-block;
-    overflow: hidden;
-}
-
-.scale img {
-    max-width: 372.33;
-    max-height: 372.33;
-    transition: 1s;
-    display: block;
-}
-
-.scale img:hover {
-    transform: scale(1.2);
-}
-
-#countdown1 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown2 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown3 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown4 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown5 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown6 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-.countdown-unit {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #fff;
-}
-
-.countdown-unit .countdown-value {
-    font-size: 3rem;
-    color: #fff;
-}
-
-.countdown-unit .countdown-label {
-    font-size: 1rem;
-    color: #fff;
-}
-
-.footer {
-    background-color: #24262b;
-    padding: 70px 0;
-    margin-top: 80px;
 }
 
 .fcontainer {
@@ -192,7 +160,6 @@ body {
     display: block;
     transition: all 0.3s ease;
 }
-
 .footer-col ul li a:hover {
     color: white;
     padding-left: 10px;
@@ -233,6 +200,10 @@ body {
         width: 50%;
         padding-left: 0%;
     }
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
@@ -246,12 +217,12 @@ body {
     #offcanvasNavbar {
         width: 280px;
     }
-    .scale {
-        width: 100%;
-
-        flex-direction: column;
+    .right-side {
+        padding: 0;
+        border-left: none;
     }
     .footer-col {
         width: 100%;
+        margin-bottom: 20px;
     }
 }

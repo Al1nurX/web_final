@@ -114,6 +114,16 @@ window.onclick = function (event) {
 }
 
 // 4
+function submitForm() {
+    var user = document.getElementById('name').value;
+    var pass = document.getElementById('password').value;
+
+    if (user === 'admin' && pass === 'admin') {
+        window.location.href = 'admin.html';
+        return false;
+    }
+}
+
 function registerUser() {
 
     var username = document.getElementById('regName').value;
@@ -121,6 +131,13 @@ function registerUser() {
     var phoneNumber = document.getElementById('regNumber').value;
 
     var users = JSON.parse(localStorage.getItem('users')) || [];
+
+    var existingUser = users.find(user => user.username === username);
+
+    if (existingUser) {
+        alert('User with this username already exists. Please choose a different username.');
+        return;
+    }
 
     var newUser = {
         username: username,
@@ -131,4 +148,27 @@ function registerUser() {
     users.push(newUser);
 
     localStorage.setItem('users', JSON.stringify(users));
+}
+
+const btnOpn = document.querySelector('#forgotPasswordLink');
+const btnCls = document.querySelector('#btn-close');
+const reset = document.querySelector('.center-reset');
+const modal2 = document.getElementById("modal2");
+
+btnOpn.addEventListener('click', () => {
+    reset.classList.add('open-reset');
+    modal2.style.display = "block";
+    modal2.classList.add('open-modal2');
+});
+
+btnCls.addEventListener('click', () => {
+    reset.classList.remove('open-reset');
+    modal2.style.display = "none";
+    modal2.classList.remove('open-modal2');
+});
+
+window.onclick = function (event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
 }

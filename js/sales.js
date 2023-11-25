@@ -15,12 +15,12 @@ function startCountdown(id, endDate) {
     }, 1000);
 }
 
-var countdownDate1 = new Date("2023-11-01 00:00:00").getTime();
+var countdownDate1 = new Date("2023-11-26 00:00:00").getTime();
 var countdownDate2 = new Date("2023-12-01 00:00:00").getTime();
 var countdownDate3 = new Date("2023-12-15 00:00:00").getTime();
-var countdownDate4 = new Date("2023-11-10 00:00:00").getTime();
+var countdownDate4 = new Date("2023-12-10 00:00:00").getTime();
 var countdownDate5 = new Date("2023-12-05 00:00:00").getTime();
-var countdownDate6 = new Date("2023-11-20 00:00:00").getTime();
+var countdownDate6 = new Date("2023-12-20 00:00:00").getTime();
 
 startCountdown("countdown1", countdownDate1);
 startCountdown("countdown2", countdownDate2);

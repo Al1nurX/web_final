@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
+.header {
+    background-color: #fff;
     font-family: "Montserrat", sans-serif;
+    margin-bottom: 100px;
 }
 
-.header {
-    font-family: "Montserrat", sans-serif;
-
-    margin-bottom: 100px;
+.navbar {
+    background-color: #fff;
+    border: none;
 }
 
 .no-focus {
@@ -41,10 +41,58 @@ body {
     padding-left: 45px;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    color: #333;
+}
+
+.left-side {
+    width: 30%;
+}
+
+.right-side {
+    width: 70%;
+    padding: 0 10px;
+    border-left: 1px solid #000000;
+}
+
+.right-side p {
+    margin-top: 0;
+}
+
+.date {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+}
+
+h1,
+h2,
+h3,
+a {
+    color: #e91e63;
+}
+
+.footer {
+    background-color: #24262b;
+    color: #fff;
+    padding: 70px 0;
+    margin-top: 80px;
+}
+
 .nav-item {
     color: black;
     text-decoration: none;
-
     transition: color 0.2s linear;
 }
 
@@ -52,101 +100,54 @@ body {
     color: palevioletred;
 }
 
-.scale {
-    display: inline-block;
-    overflow: hidden;
+.AixStory {
+    margin-left: 120px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
 }
 
-.scale img {
-    max-width: 372.33;
-    max-height: 372.33;
-    transition: 1s;
-    display: block;
+.line {
+    margin-left: 120px;
+    width: 300px;
+    height: 2px;
+    background-color: #e91e63;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-.scale img:hover {
-    transform: scale(1.2);
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
 }
 
-#countdown1 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown2 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown3 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown4 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown5 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-#countdown6 {
-    background: linear-gradient(
-        to right,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-    );
-    padding: 20px;
-    border-radius: 10px;
-}
-.countdown-unit {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #fff;
+.img-a {
+    transition: transform 0.4s ease-in-out;
 }
 
-.countdown-unit .countdown-value {
-    font-size: 3rem;
-    color: #fff;
+.img-a:hover {
+    transform: scale(1.1);
 }
 
-.countdown-unit .countdown-label {
-    font-size: 1rem;
-    color: #fff;
+.cc {
+    position: relative;
 }
 
-.footer {
-    background-color: #24262b;
-    padding: 70px 0;
-    margin-top: 80px;
+.aboutKar,
+.aboutKar2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutKar p {
+    font-size: 18px;
+    color: #444;
+    max-width: 400px;
 }
 
 .fcontainer {
@@ -226,13 +227,30 @@ body {
     .header {
         padding: 0 40px;
     }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .icon {
+        width: 100%;
+        padding-left: 0%;
+    }
+
     .side {
         visibility: hidden;
     }
-    .icon {
-        width: 50%;
-        padding-left: 0%;
+
+    .container {
+        margin: 20px;
     }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
+
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
@@ -243,15 +261,18 @@ body {
     .icon {
         width: 100%;
     }
+
     #offcanvasNavbar {
         width: 280px;
     }
-    .scale {
-        width: 100%;
 
-        flex-direction: column;
+    .right-side {
+        padding: 0;
+        border-left: none;
     }
+
     .footer-col {
         width: 100%;
+        margin-bottom: 20px;
     }
 }

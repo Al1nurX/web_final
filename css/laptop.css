@@ -9,6 +9,32 @@ body {
     box-sizing: border-box;
 }
 
+.no-focus {
+    top: 50px;
+    border: none !important;
+}
+
+.no-focus:focus,
+.no-focus:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.btn-close:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#offcanvasNavbar {
+    width: 350px;
+    background: #e6dddd;
+}
+
+.icon {
+    padding-left: 45px;
+}
+
 .carousel {
     position: relative;
 }
@@ -124,6 +150,8 @@ body {
     margin-bottom: 10px;
 }
 
+
+
 .footer-col ul li a {
     text-transform: capitalize;
     color: white;
@@ -157,16 +185,47 @@ body {
     background-color: white;
 }
 
+.pap{
+    display: none;
+}
+@media (max-width: 991px) {
+    .laptop{
+        display: none;
+    }
+     .pap{
+        display:block;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-toggler {
+        visibility: hidden;
+    }
+}
+
 @media (max-width: 767px) {
-    .icon {
-        width: 50%;
+    .header {
+        padding: 0 40px;
     }
     .menu {
+        visibility: hidden;
+    }
+    .icon {
         width: 50%;
+        padding-left: 0%;
     }
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .menu2 {
+        position: absolute;
+        top: 33%;
+        left: 60%;
+    }
+    .menu2 img {
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -174,18 +233,8 @@ body {
     .icon {
         width: 100%;
     }
-    .side {
-        width: 100%;
-        position: absolute;
-        top: 82%;
-    }
-    .menu {
-        width: 100%;
-
-        font-size: 5vw;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    #offcanvasNavbar {
+        width: 280px;
     }
     .scale {
         width: 100%;
@@ -194,6 +243,9 @@ body {
     }
     .footer-col {
         width: 100%;
+    }
+    #myDIV {
+        width: 280px;
     }
 }
 .scale {
@@ -214,8 +266,6 @@ body {
     font-size: 18px;
 }
 
-
-
 .scale h4 {
     text-align: center;
     margin-top: 350px;
@@ -228,19 +278,16 @@ body {
 .shopping-cart {
     background-color: white;
     border: 1px solid #ddd;
-    padding: 10px;
-    position: absolute;
-    z-index: 50;
-    width: 300px;
-    top: 148px;
-    right: -138px;
-    transform: translate(-50%, -50%);
-    height: 150px;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 400px;
+    height: 100%;
     overflow-y: auto;
     display: none;
 }
-
-
 
 .shopping-cart h2 {
     font-size: 20px;
@@ -270,15 +317,14 @@ body {
 }
 
 .price {
-    font-size: 16px; 
-    color: #333; 
-    margin-top: 5px; 
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
 }
 button {
-    border: none; 
-    outline: none; 
+    border: none;
+    outline: none;
     background-color: white;
-    
 }
 
 .filter-button {
@@ -293,7 +339,80 @@ button {
 .filter-button:hover {
     background-color: #0056b3;
 }
+.add-to-cart-button {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
+.add-to-cart-button:hover {
+    background-color: rgba(61, 28, 28, 0.7);
+}
 
-/* ---------------------------------------------------------- */
+.cart-item-details {
+    flex: 1;
+}
 
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item-image {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+#btn-close {
+    float: right;
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#cart-total {
+    font-size: 18px;
+}
+
+#btn-close:hover {
+    background-color: darkgray;
+}
+
+.cart-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item img {
+    border-radius: 8px;
+}
+
+.remove-from-cart-button {
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.remove-from-cart-button:hover {
+    background-color: #555;
+}
