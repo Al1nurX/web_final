@@ -78,16 +78,6 @@ body {
     box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
 }
 
-.jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    color: inherit;
-    background-color: #00bcd4;
-    text-align: center;
-    color: #fff;
-}
-
 a {
   color:#fff;
   text-decoration:underline;
